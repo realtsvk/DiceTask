@@ -77,11 +77,11 @@ class Solution {
     }
 
     // Calculate how many of each side number we have
-    private static HashMap<Integer, Integer> getCountOfSidesInDice(int[] dies) {
+    private static HashMap<Integer, Integer> getCountOfSidesInDice(int[] dices) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int n = 1; n <= 6; n++) {
-            map.put(n, (int) Arrays.stream(dies).filter(selectSide(n)).count());
+            map.put(n, (int) Arrays.stream(dices).filter(selectSide(n)).count());
         }
         return map;
     }
@@ -98,7 +98,7 @@ class Solution {
         }
     }
 
-    // Get random number for die side
+    // Get random number for dice side
     private static int getNumberInDice() {
         return getRandomNumberInRange(1, 6);
     }
